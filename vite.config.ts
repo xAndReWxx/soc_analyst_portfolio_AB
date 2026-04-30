@@ -4,7 +4,7 @@ import path from "node:path";
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: '/portfolio/',
+  base: '/soc_analyst_portfolio_AB/',
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
