@@ -40,11 +40,14 @@ jobs:
       - name: Build
         run: npm run build
         
+      - name: Check build output
+        run: ls -la ./dist/public || echo "Build output directory not found"
+        
       - name: Setup Pages
         uses: actions/configure-pages@v4
         
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           # Upload the dist/public folder where Vite builds the files
           path: './dist/public'
